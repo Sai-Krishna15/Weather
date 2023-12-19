@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg_img{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    min-height: 100vh;
+    background: url(bg_weather.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+.input-city{
+    width: 300px;
+    padding: .4rem;
+    border: none;
+    font-size: 1.3rem;
+}
+.box-container{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+}
+.boxes{
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.75);
+    min-width: 220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    transition: transform 0.2s;
+}
+.boxes:hover{
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 730px){
+    .bg_img{
+        padding: 2rem 0;
+    }
+    .box-container{
+        flex-direction: column;
+    }
+    .boxes,.input-city{
+        width: 70vw;
+    }
+}
